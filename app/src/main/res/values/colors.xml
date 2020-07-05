@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#99cc00</color>
+    <color name="colorPrimaryDark">#669900</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="gray">#ABABAB</color>
+    <color name="mineShaft">#212121</color>
+    <color name="black">#000000</color>
+    <color name="gray_theme">#F2F6F1</color>
+</resources>

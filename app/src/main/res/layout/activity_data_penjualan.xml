@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:layout_gravity="bottom">
+
+    <RelativeLayout
+        android:id="@+id/header_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/text_view_tanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="10dp"
+            android:text="1 Januari 2020"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+
+        <ImageButton
+            android:id="@+id/image_search"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="20dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/image_date"
+            android:background="@null"
+            android:src="@drawable/ic_search_black_24dp" />
+
+        <ImageButton
+            android:id="@+id/image_date"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/ic_date_range_black_24dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"
+            android:background="@android:color/darker_gray"
+            android:layout_below="@+id/text_view_tanggal"/>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/garis"
+        android:layout_below="@+id/header_container" />
+
+    <View
+        android:id="@+id/garis"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/bottom_container"
+        android:background="@android:color/darker_gray" />
+
+    <RelativeLayout
+        android:id="@+id/bottom_container"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/text_view_kembali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="15dp"
+        android:text="Kembali"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/text_view_hapus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:text="Hapus"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/button_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:layout_margin="5dp"
+            android:paddingStart="23dp"
+            android:paddingEnd="23dp"
+            android:background="@drawable/clickable_rounded_button_background"
+            android:text="@string/edit"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/button_cetak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:layout_margin="5dp"
+            android:paddingStart="23dp"
+            android:paddingEnd="23dp"
+            android:background="@drawable/clickable_rounded_button_background"
+            android:text="@string/cetak_ulang_struk"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
